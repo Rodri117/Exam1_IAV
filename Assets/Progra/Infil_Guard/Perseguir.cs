@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class Perseguir : MonoBehaviour
 {
-    Vector2 Enemy;             //hubica al enemi
-    public GameObject playerM; //para que se mueva
-    bool perseguirP;           //ira al infiltrado
+    Vector2 e_Enemy;             //hubica al enemi
+    public GameObject p_playerM; //para que se mueva
+    bool p_perseguirP;           //ira al infiltrado
     public int vel;            //un entero 
 
     // Update is called once per frame
     void Update()
     {
-        if(perseguirP)   //se declara pa si perseguira
+        if(p_perseguirP)   //se declara pa si perseguira
         {
-            transform.position = Vector2.MoveTowards(transform.position, Enemy, vel * Time.deltaTime);//empesar a perseguir
+            transform.position = Vector2.MoveTowards(transform.position, e_Enemy, vel * Time.deltaTime);//empesar a perseguir
 
         }
 
-        if(Vector2.Distance(transform.position, Enemy)>5f) //tamaño del rango que perseguira
+        if(Vector2.Distance(transform.position, e_Enemy)>5f) //tamaño del rango que perseguira
         {
-            perseguirP = false;    // cuando estemos en el rango
+            p_perseguirP = false;    // cuando estemos en el rango
         }
 
     }
@@ -29,8 +29,8 @@ public class Perseguir : MonoBehaviour
     {
         if(collision.tag.Equals("Player"))
         {
-            Enemy = playerM.transform.position; //perseguira el guardia
-            perseguirP = true;             //cuando nos persiga sea verdadero
+            e_Enemy = p_playerM.transform.position; //perseguira el guardia
+            p_perseguirP = true;             //cuando nos persiga sea verdadero
         }
     }
 
