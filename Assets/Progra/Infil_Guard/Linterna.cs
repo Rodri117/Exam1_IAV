@@ -1,11 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UIElements;
 using UnityEngine;
 
 public class Linterna : MonoBehaviour
 {
     public Transform player;           // donde esta el guardia
     public Transform head;             // parte de la linterna la base
+
+    public float tiempo = 2f;
+    public float tacumula = 0f;
+
+    public string estadoActual = "normal";
 
     [Range(0f, 360f)]
     public float visionAngular = 30f;   //angulo de vicion de la linterna
@@ -22,6 +28,11 @@ public class Linterna : MonoBehaviour
             if(playerVector.magnitude < visionDistansia)
             {
                 detectar = true;         //deteccion del player
+                tacumula += Time.deltaTime;
+                if(tacumula >= tiempo)
+                {
+                    //mi guardia pasa a estado de ataque
+                }
             }
         }
     }
