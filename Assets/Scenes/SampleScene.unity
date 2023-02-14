@@ -537,13 +537,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df27bc99558bfb7488bca8516f08b631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 786239185}
-  head: {fileID: 790074151}
-  tiempo: 2
+  p_player: {fileID: 1717946049}
+  h_head: {fileID: 790074151}
+  t_tiempo: 2
   tacumula: 0
   estadoActual: normal
-  visionAngular: 27
-  visionDistansia: 5
+  v_visionAngular: 27
+  v_visionDistansia: 5
 --- !u!114 &1717946051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd060aa49a4dc774eaae52a1c3e3b9c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerM: {fileID: 786239182}
+  p_playerM: {fileID: 786239182}
   vel: 5
 --- !u!60 &1717946052
 PolygonCollider2D:

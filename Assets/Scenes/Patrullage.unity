@@ -399,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 770eef678aaa0574e91403c94272a54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velovidadMov: 2
-  puntosMov:
+  v_velovidadMov: 5
+  p_puntosMov:
   - {fileID: 1709787583}
   - {fileID: 1135639372}
   - {fileID: 205477514}
@@ -408,7 +408,7 @@ MonoBehaviour:
   - {fileID: 768701895}
   - {fileID: 1659217066}
   - {fileID: 738905843}
-  distanciaMin: 0.2
+  d_distanciaMin: 0.2
 --- !u!212 &1346066700
 SpriteRenderer:
   m_ObjectHideFlags: 0
